@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>SmartRelief Dashboard</title>
+<link rel="stylesheet" href="style.css">
+ <link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+	<!-- ================= TOP NAVBAR ================= -->
+	<div class="topbar">
+
+		<!-- Menu Button -->
+		<button onclick="toggleSidebar()" class="menu-btn"><i class="fas fa-bars"></i>
+</button>
+
+		<!-- Project Name -->
+		<h2 class="logo">SmartRelief AI System</h2>
+
+		<!-- Profile Section -->
+		<div class="profile">
+
+			<div class="profile-info" onclick="toggleProfile()">
+				<span class="profile-icon"><i class="fas fa-user"></i>
+</span> <span id="userEmail">Loading...</span>
+			</div>
+
+			<!-- Dropdown -->
+			<div class="profile-dropdown" id="profileDropdown">
+				<p>
+					<strong>User Email:</strong>
+				</p>
+				<p id="profileEmail">Loading...</p>
+
+				<hr>
+
+				<button onclick="logout()">Logout</button>
+			</div>
+
+		</div>
+
+	</div>
+
+	<!-- ================= MAIN LAYOUT ================= -->
+	<div class="layout">
+
+		<!-- SIDEBAR -->
+		<div class="sidebar" id="sidebar">
+        <a href="dashboard.html"><i class="fas fa-home"></i> Home</a>
+        <a href="flood.html"><i class="fas fa-water"></i> Flood</a>
+        <a href="earthquake.html"><i class="fas fa-globe"></i> Earthquake</a>
+        <a href="fire.html"><i class="fas fa-fire"></i> Fire</a>
+        <a href="cyclone.html"><i class="fas fa-wind"></i> Cyclone</a>
+        <a href="reports.html"><i class="fas fa-chart-bar"></i> Reports</a>
+    </div>
+		<!-- MAIN CONTENT -->
+		<div class="content">
+
+			
+
+
+
+			<div class="welcome-card">
+				<h1>Welcome to SmartRelief</h1>
+				<p>AI-based Disaster Resource Allocation System. Select disaster
+					type from the menu to begin.</p>
+			</div>
+
+		</div>
+
+	</div>
+
+	<script src="dashboard.js"></script>
+
+</body>
+</html>

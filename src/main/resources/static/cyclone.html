@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Cyclone Disaster</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+	<div class="topbar">
+		<button onclick="toggleSidebar()" class="menu-btn">
+			<i class="fas fa-bars"></i>
+		</button>
+		<h2>Cyclone Disaster Allocation</h2>
+	</div>
+
+	<div class="layout">
+
+		<div class="sidebar" id="sidebar">
+			<a href="dashboard.html"><i class="fas fa-home"></i> Home</a> <a
+				href="flood.html"><i class="fas fa-water"></i> Flood</a> <a
+				href="earthquake.html"><i class="fas fa-globe"></i> Earthquake</a> <a
+				href="fire.html"><i class="fas fa-fire"></i> Fire</a> <a
+				href="cyclone.html"><i class="fas fa-wind"></i> Cyclone</a> <a
+				href="reports.html"><i class="fas fa-chart-bar"></i> Reports</a>
+		</div>
+
+		<div class="content">
+
+			<div class="welcome-card">
+				<h3>Enter Cyclone Details</h3>
+				<p>Provide severity and population data for AI-based resource
+					allocation.</p>
+				<form id="disasterForm">
+
+					<input type="text" id="location" placeholder="Location" required>
+
+					<input type="number" id="population"
+						placeholder="Affected Population" required> <input
+						type="number" id="severity" placeholder="Severity (1-10)" required>
+
+					<input type="number" id="vulnerable"
+						placeholder="Vulnerable Population" required> <input
+						type="number" id="damage"
+						placeholder="Infrastructure Damage (1-10)" required>
+
+					<button type="submit" class="primary-btn">Run AI
+						Allocation</button>
+
+				</form>
+
+			</div>
+
+		</div>
+	</div>
+
+	<script src="dashboard.js"></script>
+</body>
+</html>

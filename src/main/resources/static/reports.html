@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Reports</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+	<!-- TOP NAVBAR -->
+	<div class="topbar">
+		<button onclick="toggleSidebar()" class="menu-btn">
+			<i class="fas fa-bars"></i>
+		</button>
+		<h2>Disaster Reports</h2>
+	</div>
+
+	<div class="layout">
+
+		<!-- SIDEBAR -->
+		<div class="sidebar" id="sidebar">
+			<a href="dashboard.html"><i class="fas fa-home"></i> Home</a> <a
+				href="flood.html"><i class="fas fa-water"></i> Flood</a> <a
+				href="earthquake.html"><i class="fas fa-globe"></i> Earthquake</a> <a
+				href="fire.html"><i class="fas fa-fire"></i> Fire</a> <a
+				href="cyclone.html"><i class="fas fa-wind"></i> Cyclone</a> <a
+				href="reports.html"><i class="fas fa-chart-bar"></i> Reports</a>
+		</div>
+
+		<!-- CONTENT -->
+		<div class="content">
+
+			<div class="welcome-card">
+				<h3>All Disaster Reports</h3>
+				<p>AI-generated allocation history</p>
+			</div>
+
+			<div class="welcome-card">
+				<div style="overflow-x: auto;">
+					<table id="reportsTable" border="1" width="100%">
+						<thead>
+							<tr>
+								<th>ID</th>
+								<th>Location</th>
+								<th>Type</th>
+								<th>Population</th>
+								<th>Severity</th>
+								<th>Vulnerable</th>
+								<th>Damage</th>
+								<th>Priority</th>
+								<th>Score</th>
+								<th>Food</th>
+								<th>Medical</th>
+								<th>Rescue</th>
+								<th>Shelters</th>
+								<th>Created At</th>
+							</tr>
+						</thead>
+						<tbody id="reportBody">
+						</tbody>
+					</table>
+				</div>
+			</div>
+
+			<!-- Pagination INSIDE content -->
+			<div style="margin-top: 20px; text-align: center;">
+				<button onclick="prevPage()">Previous</button>
+				<span id="pageInfo"></span>
+				<button onclick="nextPage()">Next</button>
+			</div>
+
+		</div>
+	</div>
+
+	<script src="report.js"></script>
+	<script src="dashboard.js"></script>
+
+</body>
+</html>

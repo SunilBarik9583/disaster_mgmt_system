@@ -1,0 +1,313 @@
+/* ================= GLOBAL ================= */
+
+/* ================= GLOBAL ================= */
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f6f9;
+}
+
+/* ================= AUTH PAGE ================= */
+
+.auth-page {
+    background: linear-gradient(to right, #1e3c72, #2a5298);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.auth-container {
+    background: white;
+    padding: 40px;
+    width: 350px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+.auth-container input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.auth-container button {
+    width: 100%;
+    padding: 12px;
+    background: #2a5298;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.auth-container button:hover {
+    background: #1e3c72;
+}
+
+/* ================= TOPBAR ================= */
+
+.topbar {
+    height: 60px;
+    background: linear-gradient(90deg, #1e3c72, #2a5298);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.menu-btn {
+    font-size: 22px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* ================= LAYOUT ================= */
+
+.layout {
+    display: flex;
+}
+
+.sidebar {
+    width: 220px;
+    background: #2a5298;
+    min-height: calc(100vh - 60px);
+    padding-top: 20px;
+    transition: 0.3s;
+}
+
+.sidebar a {
+    display: block;
+    padding: 12px 20px;
+    color: white;
+    text-decoration: none;
+}
+
+.sidebar a:hover {
+    background: rgba(255,255,255,0.2);
+}
+
+.sidebar.hidden {
+    width: 0;
+    overflow: hidden;
+}
+
+.content {
+    flex: 1;
+    padding: 30px;
+}
+
+/* ================= CARDS ================= */
+
+.welcome-card {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+/* ================= LANDING PAGE ================= */
+
+.landing-container {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.tagline {
+    font-size: 20px;
+    margin: 10px 0;
+    color: #2a5298;
+    font-weight: bold;
+}
+
+.description {
+    max-width: 600px;
+    margin: 0 auto 40px;
+    color: #555;
+}
+
+.entry-section {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.entry-card {
+    background: white;
+    padding: 25px;
+    width: 280px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.primary-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: #2a5298;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+.secondary-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: #ff512f;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+/* ================= TABLE ================= */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    background: #2a5298;
+    color: white;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+tr:hover {
+    background: #f1f1f1;
+}
+
+/* ================= PRIORITY COLORS ================= */
+
+.critical {
+    color: red;
+    font-weight: bold;
+}
+
+.high {
+    color: orange;
+    font-weight: bold;
+}
+
+.moderate {
+    color: green;
+    font-weight: bold;
+}
+/* ================= PROFILE DROPDOWN ================= */
+
+.profile-dropdown {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 60px;
+    width: 250px;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.profile-dropdown p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #333;
+}
+
+.profile-dropdown strong {
+    color: #2a5298;
+}
+
+.profile-dropdown hr {
+    border: none;
+    height: 1px;
+    background: #ddd;
+    margin: 15px 0;
+}
+
+/* Logout Button */
+.profile-dropdown button {
+    width: 100%;
+    padding: 10px;
+    background: linear-gradient(45deg, #ff512f, #dd2476);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.profile-dropdown button:hover {
+    transform: scale(1.03);
+    opacity: 0.95;
+}
+
+/* Smooth animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.table-wrapper {
+    overflow-x: auto;
+    width: 100%;
+}
+
+table {
+    min-width: 1200px;   /* ensures layout stability */
+}
+.layout {
+    display: flex;
+    width: 100%;
+}
+
+.content {
+    flex: 1;
+    padding: 30px;
+    overflow-x: hidden;
+}
+th, td {
+    white-space: nowrap;
+}
+* {
+    box-sizing: border-box;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+
+    .sidebar {
+        position: absolute;
+        z-index: 999;
+        height: 100%;
+    }
+
+    .content {
+        padding: 20px;
+    }
+}
